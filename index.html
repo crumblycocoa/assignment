@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Café Layout</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div>Café Delight</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="left-menu" id="leftMenu">
+            <button class="toggle-btn" id="toggleBtn">⬅️ More</button>
+            <ul class="tb">
+                <li><a href="#">Appetizers</a></li>
+                <li><a href="#">Main Courses</a></li>
+                <li><a href="#">Desserts</a></li>
+                <li><a href="#">Beverages</a></li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="main-content">
+            <h1>Welcome to Café Arabia</h1>
+            <section>
+                <!-- <h2>Appetizers</h2> -->
+                <h2>Meet Our Team</h2>
+                <div class="row">
+                    <div class="col-md-4 team-member">
+                        <img src="images/head ch.jpg" alt="Founder">
+                        <h5>Emiley Doe</h5>
+                        <p>Founder & Head Chef</p>
+                    </div>
+                    <div class="col-md-4 team-member">
+                        <img src="images/men.jpg" alt="Barista">
+                        <h5>Misty Smith</h5>
+                        <p>Lead Barista</p>
+                    </div>
+                    <div class="col-md-4 team-member">
+                        <img src="images/women.jpg" alt="Manager">
+                        <h5>Hardin</h5>
+                        <p>General Manager</p>
+                    </div>
+
+
+
+                    <section class="featured-menu-section">
+                        <div class="container">
+                            <div class="row">
+                                <h2>Featured Menu</h2>
+
+                                <div class="col-md-4 menu-item">
+                                    <img src="images/bubble trea.jpg" alt="bubble">
+                                    <h5>Bubble tea</h5>
+                                    <p>A blend of green or black tea is mixed with creamy milk, crushed ice (like a iced
+                                        tea), and a couple of big handfuls of caramelised chewy tapioca balls.</p>
+                                </div>
+                                <div class="col-md-4 menu-item">
+                                    <img src="images/iced-coffee.jpg" alt="coffee">
+                                    <h5>Iced Americano</h5>
+                                    <p>Rich americano coffee with cold water and ice cubes.</p>
+                                </div>
+                                <div class="col-md-4 menu-item">
+                                    <img src="images/new mojito.jpg" alt="mojito">
+                                    <h5>Classic fresh lime mojito</h5>
+                                    <p>Loaded with added flavours of mint and addition of fresh fruit parts. Served with
+                                        fresh ingredients and delicious flavors.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+            </section>
+
+
+        </div>
+
+        <div class="right-panel">
+            <h2>Arabia's Specials</h2>
+            <ul>
+                <li><strong>Truffle Risotto</strong> - Rs. 1200</li>
+                <li><strong>Seafood Paella</strong> - Rs. 1500</li>
+                <li><strong>Red Sauce Spaghetti</strong> - Rs. 990 </li>
+            </ul>
+            <h2>Opening Hours</h2>
+            <p>Monday - Friday: 8 AM - 10 PM</p>
+            <p>Saturday - Sunday: 9 AM - 11 PM</p>
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:info@cafedelight.com">info@cafearabia.com</a></p>
+            <p>Phone: +91 21229 0000</p>
+        </div>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleBtn');
+        const leftMenu = document.getElementById('leftMenu');
+
+        toggleBtn.addEventListener('click', () => {
+            leftMenu.classList.toggle('collapsed');
+            toggleBtn.textContent = leftMenu.classList.contains('collapsed') ? '➡️ Expand' : '⬅️ Collapse';
+        });
+    </script>
+
+</body>
+
+</html>
